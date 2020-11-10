@@ -1,0 +1,159 @@
+html {
+  font-size: 10px;
+}
+body {
+  background-color: darkolivegreen;
+  position: relative;
+  pointer-events: auto;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+.container {
+  position: relative;
+  max-width: 1055px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.row {
+  display: flex;
+}
+#area {
+  height: 30vh;
+  padding: 30px;
+  background-color: #424242;
+  color: darkorange;
+  font-family: "Montserrat", "Helvetica", sans-serif;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  resize: none;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+.sound{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background-image: url(images/sound.jpg);
+  background-repeat: no-repeat;
+  background-size: 55px;
+  background-position-y: 0;
+  background-position-x: -28px;
+  filter: invert(0.9);
+}
+.sound:hover{
+  cursor: pointer;
+  box-shadow: 0 0 7px 4px orangered;
+}
+.keyboard {
+  margin-top: 20px;
+  background-color: #424242;
+  border-radius: 10px;
+  user-select: none;
+  position: relative;
+  bottom: 0;
+  transition: bottom 0.4s;
+}
+.keyboard--hidden {
+  bottom: -100%;
+}
+.key {
+  margin: 5px;
+  padding: 20px;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #212121;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.6rem;
+  cursor: pointer;
+  text-align: center;
+}
+.key--wide {
+  width: 100%;
+}
+.key--shift {
+  width: 140px;
+}
+.key--special {
+  background-color: #31312c;
+  border: 1px solid black;
+}
+.key--press {
+  box-shadow: inset 0px 0px 10px 2px #7FFF00;
+}
+.key--caps {
+  background-color: blueviolet;
+}
+.key:hover {
+  background-color: black;
+}
+p {
+  color: #fff;
+}
+
+
+@media screen and (max-width: 1069.97px) and (min-height: 885px){
+  .container {
+    max-width: 870px;
+  }
+  .key{
+    padding: 14px;
+    min-width: 19px;
+  }
+}
+@media screen and (max-width: 884.97px) and (min-width: 665px){
+  .container {
+    max-width: 645px;
+  }
+  #area {
+    font-size: 2rem;
+  }
+  .key {
+    padding: 8px;
+    min-width: 16px;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 664.97px) and (min-width: 557px){
+  .container {
+    max-width: 540px;
+  }
+  #area {
+    font-size: 2rem;
+  }
+  .key {
+    padding: 4px;
+    min-width: 17px;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 556.97px){
+  body{
+    margin: 6px;
+  }
+  .container {
+    max-width: 480px;
+  }
+  #area {
+    font-size: 1.6rem;
+  }
+  .key {
+    padding: 7px;
+    min-width: 13px;
+    margin: 2px;
+    font-size: 1.1rem;
+  }
+}
